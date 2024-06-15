@@ -155,8 +155,13 @@ jQuery(function ($) {
 
 
 
-	// Back to Top JS 
-	$('body').append('<div id="toTop" class="back-to-top-btn"><img src="https://img.icons8.com/?size=100&id=118374&format=png&color=000000" alt="Back to Top" style="width: 30px; height: auto; margin-right: 10px; margin-top: 20px;"><i class="bx bxs-up-arrow-alt"></i></div>');
+	$('body').append(`
+		<div id="toTop" class="back-to-top-btn" style="width: 30px; height: 120px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+		  <img src="https://img.icons8.com/?size=30&id=118374&format=png&color=000000" alt="Back to Top" style="width: 200px; height: 35px; margin-bottom: 15px; margin-right:30px;">
+		  <i class="bx bxs-up-arrow-alt" style="font-size: 30px;"></i>
+		</div>
+	  `);
+	  
 
 	$(window).on('scroll', function() {
 		if ($(this).scrollTop() != 0) {

@@ -21,6 +21,7 @@
         <link rel="stylesheet" href="assets/css/nice-select.min.css">
         <!-- Style CSS -->
         <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/style2.scss">
         <!-- Responsive CSS -->
         <link rel="stylesheet" href="assets/css/responsive.css">
         <!-- Theme Dark CSS -->
@@ -30,20 +31,83 @@
 
         <link rel="icon" type="image/png" href="assets/img/favicon.png">
         <style>
-    .step {
-    background: #ffffff; /* White background for each step */
-    border: 2px solid #ccc; /* Grey border */
-    border-radius: 10px;
-    margin: 10px 0;
-    padding: 10px;
-    font-size: 16px;
-  }
-  .step-header {
-    color: #054283; /* Blue color for the step title */
-    font-weight: bold;
-    font-size: large;
-    margin-bottom: 5px;
-  }
+
+.about-content {
+    background: #ffffff; /* Light background for better contrast */
+    padding: 30px;
+    margin: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    transition: box-shadow 0.3s ease;
+}
+
+.about-content:hover {
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2); /* Slight hover effect */
+}
+
+.section-title h2 {
+    color: #2a2a2a; /* Darker text for better readability */
+    font-weight: 600; /* Bolder font */
+    text-align: left; 
+    margin-bottom: 30px;
+}
+
+.step {
+    margin-top: 30px;
+    padding: 15px;
+    border-left: 5px solid #007bff; /* Blue border for visual consistency */
+    background: #f8f8f8; /* Slightly off-white background for steps */
+    border-radius: 8px; /* Rounded corners for step cards */
+    position: relative;
+    animation: fadeInLeft 0.5s both;
+}
+
+.step-header {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    font-size: 24px; /* Adjusted font size */
+    margin-bottom: 10px;
+    text-align: center; /* Ensure text is centered under the image */
+}
+
+.step-header img {
+    width: 180px; /* Icon size */
+    height: 120px; /* Icon size */
+    margin-bottom: 10px; /* Space between the icon and the text */
+}
+
+.cmn-btn {
+    display: block; /* Block level element to take the full width available */
+    width: fit-content; /* Auto width based on content */
+    margin: 20px auto; /* Center align the button horizontally */
+    background: #007bff;
+    color: white;
+    padding: 12px 30px; /* Larger padding for a bigger button */
+    text-decoration: none;
+    border-radius: 8px; /* Rounded edges for the button */
+    transition: background 0.3s, transform 0.2s;
+}
+
+.cmn-btn:hover {
+    background: #0056b3;
+    transform: translateY(-2px); /* Subtle lift effect on hover */
+}
+
+/* Animation for the steps entering */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px); /* Increased movement for more noticeable animation */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
 
   .chatbot-container {
     padding: 20px;
@@ -363,24 +427,34 @@
                     <div class="col-lg-6">
                         <div class="about-content">
                             <div class="section-title">
-                                <h2 class="">How it Works: A Quick Guide</h2> 
+                                <h2>How it Works: A Quick Guide</h2>
                             </div>
                             <div class="step">
-                                <div class="step-header">Book:</div>
-                                Find your desired location easily using our website and proceed through Easy Booking, Unbeatable Prices with our secure online payments.
-                              </div>
-                              <div class="step">
-                                <div class="step-header">Lock:</div>
-                                Simply show your booking confirmation to a store employee and leave your bags with us!
-                              </div>
-                              <div class="step">
-                                <div class="step-header">Enjoy:</div>
-                                Explore freely, and when you’re ready, show your confirmation to collect your belongings! Your Bag Awaits – No Rush!
-                              </div>
-                
+                                <div class="step-header">
+                                    <img src="/assets/img/home-two/book.jpg" alt="Book Icon">
+                                    <span>Book</span>
+                                </div>
+                                <p>Find your desired location easily using our website and proceed through Easy Booking, Unbeatable Prices with our secure online payments.</p>
+                            </div>
+                            <div class="step">
+                                <div class="step-header">
+                                    <img src="/assets/img/home-two/lock.jpg" alt="Lock Icon">
+                                    <span>Lock</span>
+                                </div>
+                                <p>Simply show your booking confirmation to a store employee and leave your bags with us!</p>
+                            </div>
+                            <div class="step">
+                                <div class="step-header">
+                                    <img src="/assets/img/home-two/enjoy.jpg" alt="Enjoy Icon">
+                                    <span>Enjoy</span>
+                                </div>
+                                <p>Explore freely, and when you’re ready, show your confirmation to collect your belongings! Your Bag Awaits – No Rush!</p>
+                            </div>
                             <a class="cmn-btn" href="#">Learn More</a>
                         </div>
                     </div>
+                    
+                    
                     <div class="col-lg-6">
                         <div class="about-img">
                             <img src="assets/img/home-two/luggage-1.jpg" alt="About">
@@ -394,6 +468,7 @@
                 </div>
             </div>
         </section>
+         <!-- End How It Works  -->
 
         <!-- Services -->
         <section class="service-area two pt-100 pb-70">
@@ -471,7 +546,7 @@
 
 
         
-        <!-- End How It Works  -->
+       
 
         <!-- Services -->
         <section class="project-area  pt-100 pb-70">

@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage Spot Booking</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Additional CSS files -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/meanmenu.css">
+    <link rel="stylesheet" href="assets/css/boxicons.min.css">
+    <link rel="stylesheet" href="assets/css/odometer.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="assets/css/nice-select.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/theme-dark.css">
+    <style>
+        .container {
+            margin-top: 50px;
+            padding-top: 120px;
+        }
+
+        .map-container {
+            height: 320px;
+        }
+
+        .booking-summary {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .booking-summary h5 {
+            margin-bottom: 20px;
+        }
+
+        .card-title {
+            font-size: 24px;
+        }
+
+        .card-subtitle {
+            font-size: 18px;
+        }
+
+        .star-rating {
+            color: #ffd700;
+            font-size: 18px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .opening-hours {
+            margin-top: 20px;
+        }
+
+        .opening-hours h6 {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+        <!-- Navbar Area -->
+        <div class="navbar-area two fixed-top">
+            <div class="main-nav">
+                <div class="container-fluid mb-2 ">
+                    <nav class="navbar navbar-expand-md navbar-light">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="assets/img/logo2.png" alt="logo2">
+                        </a>
+                        <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link dropdown-toggle">Home <i class='bx bx-chevron-down'></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item">
+                                            <a href="index.html" class="nav-link">Home Page One</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="index-2.html" class="nav-link">Home Page Two</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="index-3.html" class="nav-link">Home Page Three</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link dropdown-toggle">Pages <i class='bx bx-chevron-down'></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link dropdown-toggle">User <i class='bx bx-chevron-down'></i></a>
+                                            <ul class="dropdown-menu">
+                                                <li class="nav-item">
+                                                    <a href="sign-in.html" class="nav-link">Sign In</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="sign-up.html" class="nav-link">Sign Up</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link dropdown-toggle">Partner <i class='bx bx-chevron-down'></i></a>
+                                            <ul class="dropdown-menu">
+                                                <li class="nav-item">
+                                                    <a href="host_availability.html" class="nav-link">Partner Availability</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="team.html" class="nav-link">Team</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="testimonial.html" class="nav-link">Testimonials</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="faq.html" class="nav-link">FAQ</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="404.html" class="nav-link">404 Error Page</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="coming-soon.html" class="nav-link">Coming Soon</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="privacy-policy.html" class="nav-link">Privacy Policy</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="terms-and-conditions.html" class="nav-link">Terms & Conditions</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="about.html" class="nav-link active">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link dropdown-toggle">Services <i class='bx bx-chevron-down'></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item">
+                                            <a href="services.html" class="nav-link">Services</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="service-details.html" class="nav-link">Service Details</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link dropdown-toggle">Projects <i class='bx bx-chevron-down'></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item">
+                                            <a href="projects.html" class="nav-link">Projects</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="project-details.html" class="nav-link">Project Details</a>
+                                        </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link dropdown-toggle">Blog <i class='bx bx-chevron-down'></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item">
+                                            <a href="blog.html" class="nav-link">Blog</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="blog-details.html" class="nav-link">Blog Details</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="contact.html" class="nav-link">Contact</a>
+                                </li>
+                            </ul>
+                            <div class="side-nav">
+                                <a href="#">Book A Schedule</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- End Navbar Area -->
+    
+    <div class="container ">
+        <div class="row ">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">24/7 Circular Quay Storage Spot</h3>
+                        <h6 class="card-subtitle mb-2 text-muted">Restaurant | Open now 24 hours</h6>
+                        <div id="map" class="map-container mb-3"></div>
+                        <p><strong>Address:</strong> Address will be shown after booking</p>
+                        <p><strong>Price:</strong> Prices vary per service and time</p>
+                        <p><strong>Rating:</strong>
+                            <span class="star-rating">★★★★☆</span> 4.7 (4237 reviews)
+                        </p>
+                        <p><strong>Services:</strong> Free Wi-Fi, Bar, Bathrooms</p>
+                        <p><strong>Protection:</strong> Up to $10,000</p>
+                        <div class="opening-hours">
+                            <h6>Opening Hours:</h6>
+                            <ul class="list-unstyled">
+                                <li>Monday: 24 hours</li>
+                                <li>Tuesday: 24 hours</li>
+                                <li>Wednesday: 24 hours</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="booking-summary">
+                    <h5>Your Booking</h5>
+                    <form id="payment-form">
+                        <div class="form-group">
+                            <label for="luggageQuantity">Number of Bags:</label>
+                            <input type="number" class="form-control" id="luggageQuantity" name="luggageQuantity" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="serviceOption" class="mt-2 ps-4">Luggage Service:</label>
+                            <select class="form-control pt-0" id="serviceOption" name="serviceOption">
+                                <option value="standard">Standard - $5.00</option>
+                                <option value="home">Home Luggage - $7.00</option>
+                                <option value="window">Window Luggage - $6.50</option>
+                                <option value="office">Office Luggage - $8.00</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="storageTime">Storage Time:</label>
+                            <input type="datetime-local" class="form-control" id="storageTime" name="storageTime" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Total Price: $</label>
+                            <span id="totalPrice">0.00</span>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Book Now with Stripe</button>
+                    </form>
+                    <button id="google-pay-button" class="btn btn-dark btn-block mt-3">Book Now with Google Pay</button>
+ 
+                </div>
+                
+            </div>
+        </div>
+    </div>
+       <!-- Footer -->
+       <footer class="pt-30">
+        <div class="container ">
+            <div class="row">
+                <div class="col-sm-6 col-lg-3">
+                    <div class="footer-item">
+                        <div class="footer-logo2">
+                            <a href="index.html">
+                                <img src="assets/img/logo2.png" alt="logo2">
+                            </a>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five centuries, but also the leap into electronic.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="footer-item">
+                        <div class="footer-company">
+                            <h3>Company</h3>
+                            <ul>
+                                <li>
+                                    <a href="about.html" target="_blank">About</a>
+                                </li>
+                                <li>
+                                    <a href="services.html" target="_blank">Services</a>
+                                </li>
+                                <li>
+                                    <a href="projects.html" target="_blank">Projects</a>
+                                </li>
+                                <li>
+                                    <a href="team.html" target="_blank">Team</a>
+                                </li>
+                                <li>
+                                    <a href="blog.html" target="_blank">Blog</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="footer-item">
+                        <div class="footer-company">
+                            <h3>Support</h3>
+                            <ul>
+                                <li>
+                                    <a href="faq.html" target="_blank">FAQ</a>
+                                </li>
+                                <li>
+                                    <a href="privacy-policy.html" target="_blank">Privacy Policy</a>
+                                </li>
+                                <li>
+                                    <a href="terms-and-conditions.html" target="_blank">Terms & Conditions</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank">Community</a>
+                                </li>
+                                <li>
+                                    <a href="contact.html" target="_blank">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="footer-item">
+                        <div class="footer-contact">
+                            <h3>Contact Info</h3>
+                            <ul>
+                                <li>
+                                    <span>Location: 6th Floor, Barbosa, Sidney</span>
+                                </li>
+                                <li>
+                                    <span>Email:</span>
+                                    <a href="mailto:info@Urlocker.com" target="_blank">info@Urlocker.com</a>
+                                </li>
+                                <li>
+                                    <span>Phone:</span>
+                                    <a href="tel:+0123456789" target="_blank">+0123 456 789</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-social">
+                            <ul>
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <i class='bx bxl-facebook'></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <i class='bx bxl-twitter'></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <i class='bx bxl-linkedin'></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <i class='bx bxl-instagram'></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright-area">
+                <p>Copyright @<script>document.write(new Date().getFullYear())</script> Urlocker. Designed By <a href="https://hibootstrap.com/" target="_blank">HiBootstrap</a></p>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCupdXut4FuMzxoOk6bw8B4gDAYfpOYcvo&callback=initMap" async defer></script>
+    <script>
+        function initMap() {
+            var location = { lat: -33.864, lng: 151.209 }; // Coordinates for Circular Quay, Sydney
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: location
+            });
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map
+            });
+        }
+    </script>
+    <!-- Stripe Integration -->
+    <script src="https://js.stripe.com/v3/"></script>
+    <script>
+        var stripe = Stripe('your-publishable-key-here'); // Use your publishable key
+        var elements = stripe.elements();
+
+        // Handle form submission
+        var form = document.getElementById('payment-form');
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            var luggageQuantity = parseInt(document.getElementById('luggageQuantity').value);
+            var serviceOptions = {
+                'standard': 5.00,
+                'home': 7.00,
+                'window': 6.50,
+                'office': 8.00
+            };
+            var selectedService = document.getElementById('serviceOption').value;
+            var servicePrice = serviceOptions[selectedService];
+            var totalPrice = luggageQuantity * servicePrice;
+            document.getElementById('totalPrice').textContent = totalPrice.toFixed(2);
+
+            // Assuming your backend is set up to create a payment intent
+            fetch('/create-payment-intent', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ amount: totalPrice * 100 }) // Stripe expects amount in cents
+            }).then(function (result) {
+                // Handle result.error or confirm the payment
+            });
+        });
+    </script>
+    <!-- Google Pay Integration -->
+    <script src="https://pay.google.com/gp/p/js/pay.js" async defer></script>
+    <script>
+        const googlePayButton = document.getElementById('google-pay-button');
+
+        function onGooglePayLoaded() {
+            const paymentsClient = new google.payments.api.PaymentsClient({ environment: 'TEST' });
+            const button = paymentsClient.createButton({ onClick: onGooglePayClicked });
+            googlePayButton.appendChild(button);
+        }
+
+        function onGooglePayClicked() {
+            const paymentsClient = new google.payments.api.PaymentsClient({ environment: 'TEST' });
+
+            const paymentDataRequest = {
+                apiVersion: 2,
+                apiVersionMinor: 0,
+                allowedPaymentMethods: [{
+                    type: 'CARD',
+                    parameters: {
+                        allowedAuthMethods: ['PAN_ONLY', 'CRYPTOGRAM_3DS'],
+                        allowedCardNetworks: ['MASTERCARD', 'VISA']
+                    },
+                    tokenizationSpecification: {
+                        type: 'PAYMENT_GATEWAY',
+                        parameters: {
+                            gateway: 'stripe',
+                            'stripe:version': '2018-10-31',
+                            'stripe:publishableKey': 'your-publishable-key-here'
+                        }
+                    }
+                }],
+                merchantInfo: {
+                    merchantId: 'your-merchant-id',
+                    merchantName: 'Your Merchant Name'
+                },
+                transactionInfo: {
+                    totalPriceStatus: 'FINAL',
+                    totalPriceLabel: 'Total',
+                    totalPrice: '0.00',
+                    currencyCode: 'USD',
+                    countryCode: 'US'
+                }
+            };
+
+            paymentsClient.loadPaymentData(paymentDataRequest).then(function(paymentData) {
+                // handle the response
+                processPayment(paymentData);
+            }).catch(function(err) {
+                // show error in developer console for debugging
+                console.error(err);
+            });
+        }
+
+        function processPayment(paymentData) {
+            // handle the response
+            const paymentToken = paymentData.paymentMethodData.tokenizationData.token;
+            // Pass payment token to your backend for processing with the payment gateway
+        }
+
+        document.addEventListener('DOMContentLoaded', onGooglePayLoaded);
+    </script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Additional JS files -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/form-validator.min.js"></script>
+    <script src="assets/js/contact-form-script.js"></script>
+    <script src="assets/js/jquery.ajaxchimp.min.js"></script>
+    <script src="assets/js/jquery.meanmenu.js"></script>
+    <script src="assets/js/odometer.min.js"></script>
+    <script src="assets/js/jquery.appear.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/thumb-slide.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+
+</html>

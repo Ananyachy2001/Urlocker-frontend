@@ -29,6 +29,78 @@
         <title>Urlocker - Luggage Service Company HTML Template</title>
 
         <link rel="icon" type="image/png" href="assets/img/favicon.png">
+        <style>
+    .step {
+    background: #ffffff; /* White background for each step */
+    border: 2px solid #ccc; /* Grey border */
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+  }
+  .step-header {
+    color: #054283; /* Blue color for the step title */
+    font-weight: bold;
+    font-size: large;
+    margin-bottom: 5px;
+  }
+
+  .chatbot-container {
+    padding: 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.chatbot-box {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.chatbot-header {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
+    text-align: center;
+}
+
+.chat-messages {
+    height: 200px;
+    overflow-y: auto;
+    padding: 15px;
+    background-color: #e9ecef;
+    border-bottom: 1px solid #ddd;
+}
+
+.chatbot-input-area {
+    padding: 10px;
+    display: flex;
+    background-color: #f4f4f4;
+}
+
+.chatbot-input-area input {
+    flex-grow: 1;
+    margin-right: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.chatbot-input-area button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+  
+        </style>
     </head>
     <body>
         <!-- Preloader -->
@@ -51,8 +123,8 @@
 <div class="navbar-area fixed-top">
     <!-- Menu For Mobile Device -->
     <div class="mobile-nav">
-        <a href="index.html" class="logo2">
-            <img src="assets/img/logo2.png" alt="logo2">
+        <a href="index2.html" class="logo2">
+            <img  src="assets/img/home-two/logo-1.jpg" alt="logo1">
         </a>
     </div>
 
@@ -60,9 +132,10 @@
     <div class="main-nav">
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-light">
-                <a class="navbar-brand" href="index.html">
-                    <img src="assets/img/logo2.png" alt="logo2">
+                <a class="navbar-brand" href="index2.html">
+                    <img src="assets/img/home-two/logo-1.jpg" alt="logo2">
                 </a>
+                
                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item">
@@ -89,7 +162,7 @@
                                             <a href="sign-in.html" class="nav-link">Sign In</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="sign-up.html" class="nav-link">Sign Up</a>
+                                            <a href="userbookingreminder.html" class="nav-link">User Booking Reminder</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -141,17 +214,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link dropdown-toggle">Login <i class='bx bx-chevron-down'></i></a>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">Host Login</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">Partner Login</a>
-                                </li>
-                            </ul>
-                        </li>
+
                         <li class="nav-item">
                             <a href="contact.html" class="nav-link">Contact</a>
                         </li>
@@ -161,9 +224,9 @@
                                 <li class="nav-item">
                                     <a href="blog.html" class="nav-link">Drop & Pickup your keys</a>
                                 </li>
-                                <li class="nav-item">
+                                <!-- <li class="nav-item">
                                     <a href="blog-details.html" class="nav-link">Vehicle Parking 🚗</a>
-                                </li>
+                                </li> -->
                                 <li class="nav-item">
                                     <a href="blog-details.html" class="nav-link">Furniture Storage</a>
                                 </li>
@@ -174,7 +237,15 @@
                     <ul class="navbar-nav ml-auto">
 
                         <li class="nav-item">
-                            <a href="#" class="nav-link" id="partner-login-btn">Partner Login</a>
+                            <a href="#" class="nav-link dropdown-toggle">Login <i class='bx bx-chevron-down'></i></a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item">
+                                    <a href="#" class="partner-login-btn">Partner Login</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">User Login</a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link dropdown-toggle">Language <i class='bx bx-chevron-down'></i></a>
@@ -185,6 +256,12 @@
                                 <li class="nav-item">
                                     <a href="#" class="nav-link">Spanish</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Chinese</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Arabic</a>
+                                </li>
                             </ul>
                         </li>
                     </ul>
@@ -193,10 +270,10 @@
                     <div id="partner-login-modal" class="modal">
                         <div class="modal-content">
                             <span class="close">&times;</span>
-                            <form>
+                            <form id="login-form">
                                 <h2 style="color: #fdb139; background-color: #3D3D3D; display: inline-block; padding: 10px 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
                                     Partner Login
-                                  </h2>
+                                </h2>
                                 <label for="login-username">Username</label>
                                 <input type="text" id="login-username" name="username" required>
                                 <label for="login-password">Password</label>
@@ -237,72 +314,86 @@
 
 
 
-        <!-- Banner -->
-        <div class="banner-area two">
-            <div class="d-table">
-                <div class="d-table-cell">
-                    <div class="container">
-                        <div class="banner-text">
-                            <h1>The Best <span>Luggage</span> Service Agency Near You</h1>
-                            <p>Discover top-notch luggage services tailored to your needs. Whether you're traveling for business or pleasure, we ensure your belongings arrive safe and secure.</p>
-                            <div class="banner-form">
-                                <h2>Looking For Luggage Services! We Are Here...</h2>
-                                <form>
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <div class="form-group">
-                                                <label>
-                                                    <i class='bx bx-user'></i>
-                                                </label>
-                                                <input type="text" class="form-control" placeholder="Your Name">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="form-group">
-                                                <select class="form-control" name="service">
-                                                    <option>Choose Your Service</option>
-                                                    <option>Home Luggage</option>
-                                                    <option>Office Luggage</option>
-                                                    <option>Shop Luggage</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="form-group">
-                                                <input type="number" class="form-control" placeholder="Quantity" name="quantity">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Approx. Weight" name="weight">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="form-group">
-                                                <!-- Hidden option to set the default value for location -->
-                                                <select class="form-control" name="location">
-                                                    <option value="nearby" selected style="display:none;">Nearby</option>
-                                                    <option>Other Location 1</option>
-                                                    <option>Other Location 2</option>
-                                                    <option>Other Location 3</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12">
-                                            <button type="submit" class="btn cmn-btn">Book Now</button>
+<!-- Banner -->
+<div class="banner-area two">
+    <div class="d-table">
+        <div class="d-table-cell">
+            <div class="container">
+                <div class="banner-text">
+                    <h1>The Best <span>Luggage</span> Service Near You</h1>
+                    <p>Discover top-notch luggage services tailored to your needs. Whether you're traveling for business or pleasure, we ensure your belongings arrive safe and secure.</p>
+                    <div class="banner-form">
+                        <h2>Looking For Luggage Services! We Are Here...</h2>
+                        <form id="locationForm">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="input-group ">
+                                        <input type="text" id="location" list="location-suggestions" class="form-control" placeholder="Enter your location">
+                                        <datalist id="location-suggestions">
+                                            <option value="New York"></option>
+                                            <option value="Los Angeles"></option>
+                                            <option value="Chicago"></option>
+                                            <option value="Houston"></option>
+                                            <option value="Phoenix"></option>
+                                            <!-- Add more options as needed -->
+                                        </datalist>
+                                        <div class="input-group-append ms-3">
+                                            <button type="submit" class="btn cmn-btn p-8 mb-3">Search</button>
                                         </div>
                                     </div>
-                                </form>
-                                
+                                </div>
+                                <div class="col-lg-12 mt-3">
+                                    <button type="submit" class="btn cmn-btn">Find Closest Locations To Book</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <!-- End Banner -->
+
+        <!-- How it works -->
+        <section class="about-area two pt-100 pb-100">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="about-content">
+                            <div class="section-title">
+                                <h2 class="">How it Works: A Quick Guide</h2> 
+                            </div>
+                            <div class="step">
+                                <div class="step-header">Book:</div>
+                                Find your desired location easily using our website and proceed through Easy Booking, Unbeatable Prices with our secure online payments.
+                              </div>
+                              <div class="step">
+                                <div class="step-header">Lock:</div>
+                                Simply show your booking confirmation to a store employee and leave your bags with us!
+                              </div>
+                              <div class="step">
+                                <div class="step-header">Enjoy:</div>
+                                Explore freely, and when you’re ready, show your confirmation to collect your belongings! Your Bag Awaits – No Rush!
+                              </div>
+                
+                            <a class="cmn-btn" href="#">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-img">
+                            <img src="assets/img/home-two/luggage-1.jpg" alt="About">
+                            <div class="video-wrap">
+                                <a href="https://www.youtube.com/watch?v=Dviu-D3Fijo" class="popup-youtube">
+                                    <i class='bx bx-play'></i>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- End Banner -->
-
-
+        </section>
 
         <!-- Services -->
         <section class="service-area two pt-100 pb-70">
@@ -378,38 +469,12 @@
         </section>
         <!-- End Services -->
 
-        <!-- How it works -->
-        <section class="about-area two pt-100 pb-100">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="about-content">
-                            <div class="section-title">
-                                <span class="sub-title">How it Works</span>
-                                <h2>Discover Our Luggage Service Agency</h2>
-                            </div>
-                            <p>Our luggage service agency simplifies your travel experience by providing seamless handling and delivery of your belongings. We ensure prompt and secure transfer of luggage from your doorstep to your destination, offering peace of mind throughout your journey.</p>
-                            <a class="cmn-btn" href="#">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="about-img">
-                            <img src="assets/img/home-two/luggage-1.jpg" alt="About">
-                            <div class="video-wrap">
-                                <a href="https://www.youtube.com/watch?v=Dviu-D3Fijo" class="popup-youtube">
-                                    <i class='bx bx-play'></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+
         
         <!-- End How It Works  -->
 
         <!-- Services -->
-        <section class="project-area two pt-100 pb-70">
+        <section class="project-area  pt-100 pb-70">
             <div class="container">
                 <div class="section-title">
                     <span class="sub-title">Our Projects</span>
@@ -517,53 +582,67 @@
         </section>
         <!-- End Projects -->
 
-        <!-- FAQ -->
-        <section class="faq-area ptb-100">
-            <div class="container">
-                <div class="section-title">
-                    <span class="sub-title">FAQ</span>
-                    <h2>Have Any Question! We Are Here To Answer You</h2>
+<!-- FAQ -->
+<section class="faq-area two ptb-100">
+    <div class="container">
+        <div class="section-title">
+            <span class="sub-title">FAQ</span>
+            <h2>Have Any Question! We Are Here To Answer You</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="faq-content">
+                    <ul class="accordion">
+                        <!-- Existing FAQ questions -->
+                        <li>
+                            <a>How to register for a service?</a>
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
+                        </li>
+                        <li>
+                            <a>How to get started?</a>
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
+                        </li>
+                        <li>
+                            <a>Adjust a schedule for Luggage?</a>
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                        </li>
+                        <li>
+                            <a>Any money return guarenty for unsatisfy service?</a>
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                        </li>
+                        <li>
+                            <a>Need a pricing plan..</a>
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                        </li>
+                        <li>
+                            <a>What if something broken during clean?</a>
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                        </li>
+                    </ul>
                 </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="faq-content">
-                            <ul class="accordion">
-                                <li>
-                                    <a>How to register for a service?</a>
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-                                </li>
-                                <li>
-                                    <a>How to get started?</a>
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-                                </li>
-                                <li>
-                                    <a>Adjust a schedule for Luggage?</a>
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-                                </li>
-                                <li>
-                                    <a>Any money return guarenty for unsatisfy service?</a>
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-                                </li>
-                                <li>
-                                    <a>Need a pricing plan..</a>
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-                                </li>
-                                <li>
-                                    <a>What if something broken during clean?</a>
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-                                </li>
-                            </ul>
+            </div>
+            <div class="col-lg-6">
+                <!-- Chatbot Interface -->
+                <div class="chatbot-container">
+                    <div class="chatbot-box">
+                        <div class="chatbot-header">
+                            <h5>Chat with Us</h5>
                         </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="faq-img">
-                            <img src="assets/img/home-two/luggage-2.jpg" alt="FAQ">
+                        <div class="chat-messages" id="chat-messages">
+                            <!-- Chat messages will be displayed here -->
+                        </div>
+                        <div class="chatbot-input-area">
+                            <input type="text" id="chat-input" placeholder="Type your message...">
+                            <button onclick="sendMessage()">Send</button>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- End FAQ -->
+        </div>
+    </div>
+</section>
+<!-- End FAQ -->
+
 
         <!-- Team -->
         <section class="team-area pt-100 pb-70">
@@ -818,13 +897,28 @@
                     <div class="col-lg-6">
                         <div class="choose-contact two">
                             <div class="section-title">
-                                <span class="sub-title">Quality personified</span>
-                                <h2>Why choose us? </h2>
+                                <h2 class="ms-4">Why choose us?</h2>
                             </div>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
-                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover.</p>
+                            <ul>
+                                <li>
+                                    <strong>Security Guaranteed</strong> - Your Bags, Our Safekeeping. We ensure a 100% secure environment to store your luggage with comprehensive coverage. Enjoy your day worry-free!
+                                </li>
+                                <li>
+                                    <strong>Big or Small, We Store It All!</strong> - Offering a flat rate for all bag sizes. Size doesn’t matter to us, no need to pay extras.
+                                </li>
+                                <li>
+                                    <strong>Book Once, Store All Day</strong> - Once booked, your luggage is secure all day! Your Bag Awaits – No Rush!
+                                </li>
+                                <li>
+                                    <strong>Easy Booking, Unbeatable Prices</strong> - We ensure Hassle-Free Booking. Wallet-Friendly Rates with a fast and secure booking solution.
+                                </li>
+                                <li>
+                                    <strong>Round-the-Clock Customer Assistance</strong> - Our Chatbot Is Available Around the Clock! Feel free to reach out anytime – we’re here to help 24/7!
+                                </li>
+                            </ul>
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </div>
@@ -856,11 +950,6 @@
             </div>
         </div>
         <!-- End Subscribe -->
-
-        <div class="text-center">
-            <img src="https://logowik.com/content/uploads/images/download-on-the-app-store-get-it-on-google-play-button1710.jpg" alt="Image description" 
-            class="img-fluid mx-auto" style="width: 400px; height: 400px;"">
-          </div>
 
         <!-- Blog -->
         <section class="blog-area pt-100 pb-70">
@@ -968,6 +1057,11 @@
         </section>
         <!-- End Blog -->
 
+        <div class="text-center">
+            <img src="assets/img/home-two/android-apple.png" alt="Image description" 
+            class="img-fluid mx-auto" style="width: 600px; height: 400px; padding: 20px;">
+          </div>
+
         <!-- Footer -->
         <footer class="pt-100">
             <div class="container">
@@ -976,7 +1070,7 @@
                         <div class="footer-item">
                             <div class="footer-logo2">
                                 <a href="index.html">
-                                    <img src="assets/img/logo2.png" alt="logo2">
+                                    <img style="width: 120px; height: auto;" src="assets/img/home-two/logo-1.jpg" alt="logo2">
                                 </a>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five centuries, but also the leap into electronic.</p>
                             </div>
@@ -1083,6 +1177,37 @@
         <!-- End Footer -->
 
 <script>
+
+document.getElementById('locationForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+    window.location.href = 'searchluggagelocation1.html'; // Redirect to the search page
+});
+
+
+
+document.getElementById("login-form").onsubmit = function(event) {
+  event.preventDefault();  // Prevent form from submitting normally
+
+  // Hardcoded credentials for demonstration
+  var correctUsername = "partner";
+  var correctPassword = "12345";
+
+  // Get user input from form
+  var username = document.getElementsByName("username")[0].value;
+  var password = document.getElementsByName("password")[0].value;
+
+  // Check credentials
+  if (username === correctUsername && password === correctPassword) {
+    // Close the modal
+    document.getElementById("partner-login-modal").style.display = "none";
+
+    // Redirect to another page
+    window.location.href = "https://urlocker.netlify.app/";
+  } else {
+    alert("Incorrect username or password!");
+  }
+};
+
 // Get the modals
 var loginModal = document.getElementById("partner-login-modal");
 var registerModal = document.getElementById("partner-register-modal");

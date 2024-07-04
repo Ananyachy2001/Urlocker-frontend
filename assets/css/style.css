@@ -76,7 +76,7 @@ form {
 }
 
 form label {
-  margin: 10px 0 5px;
+  margin: auto;
 }
 
 form input {
@@ -99,6 +99,22 @@ form button {
 form button:hover {
   background-color: #45a049;
 }
+
+/* end of modal container */
+
+
+/* logo image  */
+.navbar-brand img {
+  width: 90px; /* Adjust the width as needed */
+  height: auto; /* Keeps the aspect ratio intact */
+}
+
+.mobile-nav .logo2 img {
+  width: 40px; /* Adjust the width as needed */
+  height: auto; /* Keeps the aspect ratio intact */
+}
+/* end of logo inage  */
+
 
 
 
@@ -1124,11 +1140,11 @@ button:focus {
 }
 
 .estimate-area .estimate-content .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .estimate-area .estimate-content .form-group .form-control {
-  height: 55px;
+  height: 60px;
   border-radius: 5px;
   padding-left: 20px;
   font-size: 15px;
@@ -1145,7 +1161,7 @@ button:focus {
 
 .estimate-area .estimate-content .form-group textarea {
   height: auto !important;
-  padding-top: 15px;
+  padding-top: 10px;
 }
 
 .estimate-area .estimate-content .cmn-btn {
@@ -1533,7 +1549,7 @@ footer {
 /*-- Banner CSS --*/
 .banner-area.two {
   height: 1000px;
-  background-image: url("../img/home-two/banner-bg.jpg");
+  background-image: url("../img/home-two/luggage-1.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1617,7 +1633,7 @@ footer {
 
 .banner-area.two .banner-text .banner-form .form-group label i {
   display: inline-block;
-  font-size: 20px;
+  font-size: 25px;
   color: #4a686a;
 }
 
@@ -1625,8 +1641,9 @@ footer {
   height: 55px;
   border-radius: 5px;
   border: 1px solid #4a686a;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-top: 10px;
   font-size: 15px;
 }
 
@@ -1912,7 +1929,7 @@ footer {
 }
 
 .faq-area .faq-img {
-  background-image: url("../img/home-two/luggage-2.jpg");
+  background-image: url("../img/home-two/robot.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
